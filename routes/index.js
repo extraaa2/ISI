@@ -30,5 +30,25 @@ app.get('/tiny', function(req, res, next) {
         res.send(content);
     });
 });
+app.get('/small', function(req, res, next) {
+    fs.readFile('small.txt', 'utf8', function(error, content) {
+        res.send(content);
+    });
+});
+app.get('/medium', function(req, res, next) {
+    fs.readFile('medium.txt', 'utf8', function(error, content) {
+        res.send(content);
+    });
+});
+app.get('/big', function(req, res, next) {
+    fs.readFile('big.txt', 'utf8', function(error, content) {
+        res.send(content);
+    });
+});
+app.get('/large', function(req, res, next) {
+    fs.readFile('large.txt', 'utf8', function(error, content) {
+        res.send(content);
+    });
+});
 
 module.exports = app;
